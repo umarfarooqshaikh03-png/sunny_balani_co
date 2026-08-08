@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You — Sunny Balani & Co.</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .thankyou-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 2rem 1rem;
+            z-index: 2;
+        }
+        .thankyou-card {
+            max-width: 600px;
+            width: 100%;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+        .thankyou-icon {
+            font-size: 4.5rem;
+            color: var(--primary-neon);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            animation: bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .thankyou-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        .thankyou-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+        }
+        .receipt-box {
+            background: var(--bg-dark-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 2.5rem;
+            text-align: left;
+            animation: fadeInUp 0.6s ease;
+        }
+        .receipt-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .receipt-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+        .receipt-label {
+            font-weight: 700;
+            color: var(--text-muted);
+            flex: 0.4;
+        }
+        .receipt-value {
+            color: var(--text-primary);
+            font-weight: 600;
+            text-align: right;
+            flex: 0.6;
+        }
+        .action-alert {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px dashed var(--accent-yellow);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .action-alert strong {
+            color: var(--text-primary);
+        }
+        .careers-cta-btn {
+            background: #25D366;
+            color: #FFFFFF !important;
+            border: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+            margin-bottom: 1rem;
+        }
+        .careers-cta-btn:hover {
+            background: #1ebd59;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            70% { transform: scale(0.9); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 576px) {
+            .thankyou-card {
+                padding: 2rem 1.5rem;
+            }
+            .thankyou-title {
+                font-size: 1.8rem;
+            }
+            .receipt-row {
+                flex-direction: column;
+                margin-bottom: 1rem;
+            }
+            .receipt-label {
+                margin-bottom: 0.25rem;
+            }
+            .receipt-value {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body class="light-theme">
+
+    <!-- Interactive Particle Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Top Navigation Bar (Simplified) -->
+    <header class="glass-header" style="position: static; border-bottom: 1px solid var(--border-color);">
+        <div class="container header-container" style="padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html#home" class="brand-logo" style="display: flex; flex-direction: column;">
+                <span class="logo-main" style="font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--primary-blue); letter-spacing: 0.05em;">SUNNY BALANI & CO.</span>
+                <span class="logo-sub" style="font-family: var(--font-body); font-size: 0.65rem; color: var(--text-muted); font-weight: 700; letter-spacing: 0.2em; margin-top: -2px;">CHARTERED ACCOUNTANTS</span>
+            </a>
+            <a href="index.html#home" class="secondary-btn" style="width: auto; padding: 0.5rem 1.25rem; font-size: 0.85rem;"><i class="fa-solid fa-arrow-left"></i> Home</a>
+        </div>
+    </header>
+
+    <main class="main-content" style="padding-top: 2rem;">
+        <div class="container thankyou-wrapper">
+            <div class="thankyou-card glass-card">
+                <div class="thankyou-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h1 class="thankyou-title" id="main-title">Thank You!</h1>
+                <p class="thankyou-subtitle" id="main-subtitle">Your form has been submitted successfully.</p>
+
+                <!-- General Inquiry Receipt Block -->
+                <div class="receipt-box hidden" id="receipt-contact">
+                    <div class="receipt-title"><i class="fa-solid fa-envelope-open-text"></i> Inquiry Overview</div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Applicant Name</span>
+                        <span class="receipt-value" id="contact-val-name">-</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Nature of Inquiry</span>
+                        <span class="receipt-value" id="contact-val-query">-</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;"><i class="fa-solid fa-clock"></i> We will review your query and respond via email/phone within one working day.</p>
+                </div>
+
+                <!-- Booking Details Block -->
+                <div class="receipt-box hidden" id="receipt-booking">
+                    <div class="receipt-title"><i class="fa-solid fa-calendar-check"></i> Session Details</div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Client Name</span>
+                        <span class="receipt-value" id="booking-val-name">-</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Business Structure</span>
+                        <span class="receipt-value" id="booking-val-entity">-</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Consultation Scope</span>
+                        <span class="receipt-value" id="booking-val-needs" style="word-break: break-word;">-</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Date & Time Slot</span>
+                        <span class="receipt-value" id="booking-val-datetime" style="color: var(--primary-neon); font-weight: 700;">-</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;"><i class="fa-solid fa-circle-info"></i> A Google Meet/calendar invite with joining details has been generated and dispatched to your email address.</p>
+                </div>
+
+                <!-- Careers Mail Dispatcher Block -->
+                <div class="receipt-box hidden" id="receipt-careers">
+                    <div class="receipt-title"><i class="fa-solid fa-briefcase"></i> Application Registry</div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Candidate Name</span>
+                        <span class="receipt-value" id="careers-val-name">-</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Target Position</span>
+                        <span class="receipt-value" id="careers-val-role">-</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Registered Phone</span>
+                        <span class="receipt-value" id="careers-val-phone">-</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Registered Email</span>
+                        <span class="receipt-value" id="careers-val-email">-</span>
+                    </div>
+
+                    <div class="action-alert">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-yellow); margin-right: 0.35rem;"></i>
+                        <strong>Action Required</strong>: Your contact details are registered, but to complete your application, you must send your resume. Click the button below to pre-populate your application email draft and attach your CV document.
+                    </div>
+
+                    <a href="#" class="primary-btn fluid-btn text-center careers-cta-btn" id="careers-email-btn">
+                        <span>Pre-populate CV Email Draft</span>
+                        <i class="fa-solid fa-paper-plane" style="margin-left: 0.5rem;"></i>
+                    </a>
+                </div>
+
+                <div class="actions" style="margin-top: 2rem;">
+                    <a href="index.html#home" class="secondary-btn inline-btn" style="width: auto; padding: 0.75rem 2rem;"><i class="fa-solid fa-house"></i> Return to Homepage</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS Orchestrator -->
+    <script src="js/particles.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Parse URL Parameters
+            const params = new URLSearchParams(window.location.search);
+            const source = params.get('source') || 'contact';
+
+            // DOM Elements
+            const titleEl = document.getElementById('main-title');
+            const subtitleEl = document.getElementById('main-subtitle');
+
+            const receiptContact = document.getElementById('receipt-contact');
+            const receiptBooking = document.getElementById('receipt-booking');
+            const receiptCareers = document.getElementById('receipt-careers');
+
+            if (source === 'contact') {
+                titleEl.textContent = 'Inquiry Registered';
+                subtitleEl.textContent = 'Thank you for reaching out to Sunny Balani & Co.';
+                
+                document.getElementById('contact-val-name').textContent = params.get('name') || 'Valued Visitor';
+                document.getElementById('contact-val-query').textContent = params.get('queryType') || 'General Business Query';
+                
+                receiptContact.classList.remove('hidden');
+            } 
+            else if (source === 'booking') {
+                titleEl.textContent = 'Session Confirmed';
+                subtitleEl.textContent = 'Your compliance consultation has been successfully scheduled.';
+                
+                document.getElementById('booking-val-name').textContent = params.get('name') || '-';
+                document.getElementById('booking-val-entity').textContent = params.get('entity') || '-';
+                document.getElementById('booking-val-needs').textContent = params.get('needs') || '-';
+                document.getElementById('booking-val-datetime').textContent = params.get('dateTime') || '-';
+                
+                receiptBooking.classList.remove('hidden');
+            } 
+            else if (source === 'careers') {
+                titleEl.textContent = 'Registration Complete';
+                subtitleEl.textContent = 'Your application profile is logged in our candidate directory.';
+                
+                const name = params.get('name') || '-';
+                const role = params.get('position') || 'Articleship Application';
+                const phone = params.get('phone') || '-';
+                const email = params.get('email') || '-';
+
+                document.getElementById('careers-val-name').textContent = name;
+                document.getElementById('careers-val-role').textContent = role;
+                document.getElementById('careers-val-phone').textContent = phone;
+                document.getElementById('careers-val-email').textContent = email;
+
+                // Configure Email CTA Link
+                const emailBtn = document.getElementById('careers-email-btn');
+                if (emailBtn) {
+                    const emailSubject = encodeURIComponent(role);
+                    const emailBody = encodeURIComponent(`Hi CA Sunny Balani,\n\nI have registered my contact details on your website Careers Portal. Please find attached my CV for the ${role} position.\n\nMy Details:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nRegards,\n${name}`);
+                    emailBtn.href = `mailto:connect@casunnybalani.com?subject=${emailSubject}&body=${emailBody}`;
+                }
+
+                receiptCareers.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

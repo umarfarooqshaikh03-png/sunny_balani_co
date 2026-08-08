@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Home Page -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- About Us Section -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=about</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services (General) -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=services</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services: Income Tax Compliance -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=services&amp;tab=srv-tax</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services: GST Compliance -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=services&amp;tab=srv-gst</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services: Capital Gains & F&O Taxation -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=services&amp;tab=srv-cap</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services: Startups & ESOP Advisory -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=services&amp;tab=srv-esop</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services: Statutory Audit & Advisory -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=services&amp;tab=srv-advisory</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- Knowledge Hub -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=knowledge</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact & Booking -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=contact</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Careers -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/?view=careers</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Thank You Page -->
+  <url>
+    <loc>https://casunnybalani.com/Dev/thankyou.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
